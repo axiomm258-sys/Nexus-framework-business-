@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS FRAMEWORK | Automated Intelligence Hub</title>
+    <style>
+        :root {
+            --bg-base: #060709;
+            --panel-bg: #0f1115;
+            --panel-border: #1b1e24;
+            --mint-accent: #00ffaa; 
+            --text-primary: #f3f4f6;
+            --text-secondary: #8e95a5;
+            --text-dim: #4a505e;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        /* Header */
+        header { width: 100%; max-width: 500px; padding: 1rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--panel-border); }
+        .logo-group { display: flex; align-items: center; gap: 10px; }
+        .brand-emblem { width: 24px; height: 24px; border: 2px solid var(--text-primary); border-top-color: var(--mint-accent); border-bottom-color: var(--mint-accent); border-radius: 4px; transform: rotate(45deg); position: relative; }
+        .brand-name { font-weight: 800; font-size: 1.1rem; text-transform: uppercase; }
+        .brand-name span { color: var(--mint-accent); }
+        .live-indicator { display: flex; align-items: center; gap: 6px; font-size: 0.65rem; color: var(--mint-accent); font-weight: 700; }
+        .pulse-dot { width: 6px; height: 6px; background-color: var(--mint-accent); border-radius: 50%; animation: pulse 1.8s infinite; }
+
+        /* New Hero Section */
+        .hero-text {
+            width: 90%; max-width: 450px; color: #ffffff; font-size: 1.4rem; font-weight: 900;
+            text-transform: uppercase; text-align: center; margin: 1.5rem 0; line-height: 1.3;
+        }
+
+        /* App Container */
+        .app-container { max-width: 450px; width: 92%; }
+        .feed-card { background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: 8px; padding: 2.5rem 2rem; margin-bottom: 2rem; }
+        .meta-timeline { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 1.5rem; text-transform: uppercase; }
+        .dynamic-title { font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.5rem; }
+        .unlock-btn { background: var(--mint-accent); color: var(--bg-base); border: none; padding: 16px 0; font-weight: 700; width: 100%; text-transform: uppercase; cursor: pointer; border-radius: 4px; }
+        .corporate-disclosure { border-top: 1px solid var(--panel-border); padding-top: 1.5rem; margin-top: 2rem; }
+        .disclosure-paragraph { font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 1.2rem; }
+
+        /* Footer */
+        footer { width: 100%; max-width: 450px; padding: 2rem 1rem; border-top: 1px solid var(--panel-border); display: flex; flex-direction: column; gap: 1.5rem; align-items: center; }
+        .footer-links-grid { display: flex; justify-content: center; gap: 1.5rem; }
+        .footer-link { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; cursor: pointer; }
+        .copyright-text { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; }
+
+        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-group">
+            <div class="brand-emblem"></div>
+            <div class="brand-name">Nexus<span>Framework</span><sup>®</sup></div>
+        </div>
+        <div class="live-indicator">
+            <div class="pulse-dot"></div>
+            <span>Global Feed Live</span>
+        </div>
+    </header>
+
+    <!-- Hero Title -->
+    <h1 class="hero-text">NEXUS FRAMEWORK: HELPING BUSINESSES WORK FASTER AND SMARTER</h1>
+
+    <main class="app-container">
+        <div class="feed-card">
+            <div class="meta-timeline">
+                <span id="display-date">SYNCHRONIZING...</span>
+                <span>STATUS: ACTIVE</span>
+            </div>
+            
+            <h2 id="live-content-heading" class="dynamic-title">Accessing global connection nexus...</h2>
+            
+            <button class="unlock-btn" onclick="goToLocker()">Partner With Us / Access Tools</button>
+
+            <div class="corporate-disclosure">
+                <p class="disclosure-paragraph"><span>Operational Overview:</span> This hub functions as a proprietary infrastructure dashboard designed to monitor high-level system logic, architectural distributions, and industrial workflow efficiency metrics.</p>
+                <p class="disclosure-paragraph"><span>Security & Compliance Node:</span> All linked data corridors are structured under encrypted, open-protocol standard verification systems to ensure a secure environment for business operators.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links-grid">
+            <a class="footer-link" onclick="goToLocker()">System Tools</a>
+            <a class="footer-link" onclick="goToLocker()">Privacy Protocol</a>
+        </div>
+        <div class="copyright-text">&copy; 2026 Nexus Framework® Network.</div>
+    </footer>
+
+    <script>
+        const yourCpaLink = "https://quartzfiles.com/nexusdashboard";
+        function fetchLiveContent() {
+            document.getElementById("display-date").innerText = new Date().toLocaleDateString("en-US", { month: 'short', day: 'numeric', year: 'numeric' });
+            document.getElementById("live-content-heading").innerText = "Market Logic: Optimize operational systems to scale quarterly efficiency metrics.";
+        }
+        function goToLocker() { window.location.href = yourCpaLink; }
+        fetchLiveContent();
+    </script>
+</body>
+</html>
